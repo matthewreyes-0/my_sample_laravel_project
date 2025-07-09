@@ -28,7 +28,7 @@ class ProductsController extends Controller
 
         $newProduct = Products::create($data);
 
-        return redirect(route('products.index'));
+        return redirect(route('products.index'))->with('success', 'Product added successfully!');
     }
 
     public function update(Products $products) {
